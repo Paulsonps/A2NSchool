@@ -1,0 +1,14 @@
+<Label text="I am A TextView Login Page"></Label>
+
+<!-- <Button [text]="isLoggingIn ? 'Sign up' : 'Back to login'" (tap)="toggleDisplay()"></Button> -->
+
+<StackLayout>
+  <Image src="res://logo" stretch="none" horizontalAlignment="center"></Image>
+
+  <TextField hint="Email Address" keyboardType="email"
+    autocorrect="false" autocapitalizationType="none"></TextField>
+  <TextField hint="Password" secure="true"></TextField>
+
+  <Button [text]="isLoggingIn ? 'Sign in' : 'Sign up'" class="submit-button" (tap)="submit()"></Button>
+  <Button [text]="isLoggingIn ? 'Sign up' : 'Back to login'" (tap)="toggleDisplay()"></Button>
+</StackLayout>
