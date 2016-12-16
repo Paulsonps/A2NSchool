@@ -1,6 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {topmost} from "ui/frame";
 import {Page} from "ui/page";
+import { Router } from "@angular/router";
 // import { User } from ".../shared/user";
 
 @Component({
@@ -8,6 +9,8 @@ import {Page} from "ui/page";
     templateUrl: "component/login_component/login.component.html",
 })
 export class LoginComponent implements OnInit {
+
+	constructor(private router: Router) {}
 
     page: Page;
     ngOnInit() {
@@ -22,6 +25,7 @@ export class LoginComponent implements OnInit {
 	    alert("You’re using: " + this.email);
 	  }
 	  toggleDisplay() {
+	  	this.router.navigate(["/register"]);
 	    this.isLoggingIn = !this.isLoggingIn;
 	  }
 }
